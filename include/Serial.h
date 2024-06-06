@@ -7,7 +7,7 @@
 
 namespace stm32f4{
     namespace serial{
-        inline void Transmit(UART_HandleTypeDef* uart, const char* message){
+        inline void print(UART_HandleTypeDef* uart, const char* message){
             HAL_UART_Transmit(uart, (uint8_t *)message, strlen(message), HAL_MAX_DELAY);
         }
 
